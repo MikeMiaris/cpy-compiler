@@ -505,14 +505,14 @@ def loadvr(v, reg):
                 nl = scope.nestingLevel
                 offset = item.offset
     
-    if nl == 0:                                     #Global metablhth
+    if nl == 0:                                     #Global variable
         asmfile.write("\tlw "+str(reg)+", -"+str(offset)+"(gp)\n")
     
-    elif nl == table.stacks[-1].nestingLevel:       #Metablith mesa sth synarthsh
+    elif nl == table.stacks[-1].nestingLevel:       #Variable inside the function
         asmfile.write("\tlw "+str(reg)+",-"+str(offset)+"(sp)\n")
             
     
-    elif nl>0 and nl<table.stacks[-1].nestingLevel: #Metablith ekso apo th synarthsh
+    elif nl>0 and nl<table.stacks[-1].nestingLevel: #Variable outside of the function
         gnlvcode(v)
         asmfile.write("\tlw "+str(reg)+",0(t0)\n")
 
@@ -531,14 +531,14 @@ def storerv(reg,v):
                 nl = scope.nestingLevel
                 offset = item.offset
     
-    if nl == 0:                                     #Global metablhth
+    if nl == 0:                                     #Global variable
         asmfile.write("\tsw "+str(reg)+", -"+str(offset)+"(gp)\n")
     
-    elif nl == table.stacks[-1].nestingLevel:       #Metablith mesa sth synarthsh
+    elif nl == table.stacks[-1].nestingLevel:       #Variable inside the function
         asmfile.write("\tsw "+str(reg)+", -"+str(offset)+"(sp)\n")
             
     
-    elif nl>0 and nl<table.stacks[-1].nestingLevel: #Metablith ekso apo th synarthsh
+    elif nl>0 and nl<table.stacks[-1].nestingLevel: #Variable outside of the function
         gnlvcode(v)
         asmfile.write("\tsw "+str(reg)+",0(t0)\n")
 
