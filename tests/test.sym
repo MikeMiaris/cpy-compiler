@@ -1,0 +1,26 @@
+0: counterFunctionCalls/12, max3/2/32
+1: x/cv/12, y/cv/16, z/cv/20, m/24, T_1/28
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28
+1: x/cv/12, T_2/16, T_5/20, T_7/24
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28, isPrime/45/
+1: x/cv/12, i/16, divides/46/24
+2: x/cv/12, y/cv/16, T_9/20
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28, isPrime/45/32
+1: x/cv/12, i/16, divides/46/24, T_12/20, T_13/24, T_14/28
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28, isPrime/45/32, quad/75/
+1: x/cv/12, y/16, sqr/76/20
+2: x/cv/12, T_15/16
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28, isPrime/45/32, quad/75/36
+1: x/cv/12, y/16, sqr/76/20, T_17/20, T_18/24, T_19/28, T_20/32
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28, isPrime/45/32, quad/75/36, leap/94/20
+1: year/cv/12, T_21/16
+
+0: counterFunctionCalls/12, max3/2/32, fib/20/28, isPrime/45/32, quad/75/36, leap/94/20, i/16, T_25/20, T_26/24, T_27/28, T_28/32, T_29/36, T_30/40, T_31/44, T_32/48
+
+
