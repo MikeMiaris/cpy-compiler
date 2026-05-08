@@ -61,3 +61,33 @@ Functions – Defined with def name(params):. A function’s body is enclosed wi
 Input / Output – x = int(input()) and print(expression).
 
 Comments – Enclosed within ## (e.g., ## This is a comment ##).
+
+
+
+## 💡 Code Cleanup Suggestions
+
+The code is fundamentally sound. The following improvements are recommended for better maintainability:
+
+1. **Centralise global state** – Encapsulate `line`, `quad_id`, `temp_counter`, `param_count`, `retflag`, `f_check`, `fp_count`, and `quad_list` in a `CompilerState` class.
+
+2. **Consolidate table management** – Let the `scope` class own the offset counter and the stack; use `symbol_table` only as the main interface for searching.
+
+3. **Optimise the lexer** – Replace `file.seek(-1, 1)` with a lookahead queue (e.g. `collections.deque`) to avoid brittle backtracking.
+
+4. **Create quad helper functions** – Add `new_label()` and `emit_jump(label)` to improve readability when generating control flow.
+
+5. **Refactor `quadconverter`** – Split the large if/else chain into small helper methods like `_gen_add()`, `_gen_param()`, etc.
+
+6. **Use caching** – Decorate `is_not_integer()` with `@lru_cache(maxsize=None)` for repeated checks.
+
+7. **Standardise string literals** – Prefer double quotes (`"..."`) consistently.
+
+## Authors
+
+- **Michalis Miaris**
+- **Ilias Georgiadis**
+
+## Acknowledgements
+
+Developed as a term project for the **Compilers** course (Spring 2024) at the Department of Computer Science & Engineering, University of Ioannina.  
+Instructor: Prof. G. Manis.
