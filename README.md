@@ -64,7 +64,7 @@ Comments – Enclosed within ## (e.g., ## This is a comment ##).
 
 
 
-## 💡 Code Cleanup Suggestions
+## Code Cleanup Suggestions
 
 The code is fundamentally sound. The following improvements are recommended for better maintainability:
 
