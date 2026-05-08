@@ -31,3 +31,34 @@
    ```bash
    git clone https://github.com/MikeMiaris/cpy-compiler.git
    cd cpy-compiler
+
+2. **Run the compiler on a valid .cpy source file**
+
+bash
+python src/cpy_4735_4645.py tests/test.cpy
+This generates three files:
+
+test.asm – final RISC‑V assembly output
+
+test.int – listing of the intermediate quadruples
+
+test.sym – dump of the symbol tables for each lexical scope
+
+3. **Execute the assembly (using RARS)**
+
+Open test.asm in the RARS application
+
+Click Assemble
+
+Click Run or Execute
+
+## Language Quick Reference (cpy)
+Variables – Must be declared with #int.
+
+Global variables – Declared at the top level, then accessed inside functions via the global keyword.
+
+Functions – Defined with def name(params):. A function’s body is enclosed within #{ ... #}.
+
+Input / Output – x = int(input()) and print(expression).
+
+Comments – Enclosed within ## (e.g., ## This is a comment ##).
