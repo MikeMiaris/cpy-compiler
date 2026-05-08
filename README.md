@@ -2,7 +2,6 @@
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![RISC-V](https://img.shields.io/badge/Target-RISC--V-green)](https://riscv.org/)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](/LICENSE)
 
 **cpy-compiler** is a complete compiler for the **cpy** language, a small, educational programming language developed for the "Compilers" course at the University of Ioannina. It translates `.cpy` source files directly into **RISC-V assembly**, suitable for execution on simulators like RARS or actual hardware.
 
